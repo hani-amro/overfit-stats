@@ -7,6 +7,10 @@
 ![deps](https://img.shields.io/badge/dependencies-numpy%20%2B%20scipy-green)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
+> **How this was built:** I direct AI coding assistants rather than writing
+> implementation by hand. See [how these were built](https://github.com/hani-amro)
+> on my profile.
+
 Search 600 strategy configurations against pure random noise and one of them will
 post an annualised Sharpe of 1.8. It is not a strategy. It is the maximum of 600
 draws, and the maximum of 600 draws is always impressive.
