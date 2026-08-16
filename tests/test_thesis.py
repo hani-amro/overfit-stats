@@ -59,9 +59,8 @@ def test_searching_noise_produces_a_tempting_sharpe():
     """Without this, a low DSR below could just mean the data was obviously bad.
 
     Checked across eight independent draws rather than one. A single seed would
-    make the demonstration itself depend on a lucky sample -- which is precisely
-    the error this package exists to detect, and would be an embarrassing thing
-    to leave in its own test suite.
+    make the demonstration itself depend on one lucky sample -- the same selection
+    effect this package measures, applied to its own evidence.
     """
     annualised = []
     for seed in range(8):

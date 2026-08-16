@@ -60,9 +60,6 @@ print(f"DSR {dsr:.3f} against a luck benchmark of {benchmark:.3f}; PBO {pbo:.2f}
 
 ## How to read the Deflated Sharpe Ratio
 
-This is the part most people get wrong, including an earlier version of this
-package's own test suite.
-
 DSR is a **probability**, and its benchmark is by construction the *expected
 maximum* across the trials. So for a winner drawn from pure noise the correct
 answer is **DSR near 0.5 — uninformative** — not DSR near 0.
@@ -143,9 +140,9 @@ factor of `sqrt(252)`.
 | `test_thesis.py` | noise really does produce tempting Sharpes (checked across 8 seeds, not one); DSR endorses a real edge on every seed and never confidently endorses noise; PBO and walk-forward agree with DSR on the same search |
 | `test_guards.py` | every degenerate input returns NaN rather than a number; PSR is a probability; permutation is deterministic per seed and detects hindsight timing while rejecting coin-flip timing |
 
-The thesis tests deliberately run across **multiple seeds**. A single seed would
-make the demonstration itself depend on a lucky draw — precisely the error this
-package exists to detect, and an embarrassing thing to leave in its own suite.
+The thesis tests deliberately run across **multiple seeds**. A single seed would make
+the demonstration itself depend on one lucky draw — the same selection effect the
+package measures, applied to its own evidence.
 
 ---
 
